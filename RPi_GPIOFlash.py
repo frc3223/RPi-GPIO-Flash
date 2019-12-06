@@ -1,3 +1,5 @@
+#Code made by Colin Gideon, FRC 3223
+#2019
 import RPi.GPIO as GPIO
 import time
 try:
