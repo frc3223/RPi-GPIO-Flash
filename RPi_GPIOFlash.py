@@ -1,27 +1,20 @@
-#Code made by Colin Gideon, FRC 3223
-#2019
+#Code made by Colin Gideon, FRC 3223, Robotics of Central Kitsap
+#Copyright 2019, protected under GNU General Public Licence
 import RPi.GPIO as GPIO
 import time
+flashes = 4
+flash_duration = .375
 try:
     GPIO.setmode(GPIO.BCM)  
     GPIO.setup(18,GPIO.OUT)
-    #Start of flash, flashes 4 times in intervals of 3/8 of a second
-    GPIO.output(18,True)
-    time.sleep(.375)
-    GPIO.output(18,False)
-    time.sleep(.375)
-    GPIO.output(18,True)
-    time.sleep(.375)
-    GPIO.output(18,False)
-    time.sleep(.375)
-    GPIO.output(18,True)
-    time.sleep(.375)
-    GPIO.output(18,False)
-    time.sleep(.375)
-    GPIO.output(18,True)
-    time.sleep(.375)
-    GPIO.output(18,False)
-    time.sleep(.375)
+    
+    flashed = 0
+    while flashes > flashed:
+        GPIO.output(18,True)
+        time.sleep(flash_duration)
+        GPIO.output(18,False)
+        flashed = flashed+1
+    
     #Keeps pin on until program is interupted by Y is entered.
     GPIO.output(18,True)
 
