@@ -13,6 +13,7 @@ try:
         GPIO.output(18,True)
         time.sleep(flash_duration)
         GPIO.output(18,False)
+        time.sleep(flash_duration)
         flashed = flashed+1
     
     #Keeps pin on until program is interupted by Y is entered.
