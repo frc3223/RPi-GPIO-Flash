@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -78,18 +78,14 @@
 <plain>
 <wire x1="2.54" y1="0" x2="45.72" y2="0" width="0" layer="20"/>
 <wire x1="45.72" y1="0" x2="48.24" y2="2.52" width="0" layer="20"/>
-<wire x1="48.24" y1="2.52" x2="48.24" y2="25.42" width="0" layer="20"/>
-<wire x1="48.24" y1="25.42" x2="45.32" y2="28.34" width="0" layer="20"/>
-<wire x1="45.32" y1="28.34" x2="2.94" y2="28.34" width="0" layer="20"/>
-<wire x1="2.94" y1="28.34" x2="0" y2="25.4" width="0" layer="20"/>
-<wire x1="0" y1="25.4" x2="0" y2="2.54" width="0" layer="20"/>
+<wire x1="48.24" y1="2.52" x2="48.24" y2="27.96" width="0" layer="20"/>
+<wire x1="48.24" y1="27.96" x2="45.701" y2="30.499" width="0" layer="20"/>
+<wire x1="45.701" y1="30.499" x2="2.559" y2="30.499" width="0" layer="20"/>
+<wire x1="2.559" y1="30.499" x2="0" y2="27.94" width="0" layer="20"/>
+<wire x1="0" y1="27.94" x2="0" y2="2.54" width="0" layer="20"/>
 <wire x1="0" y1="2.54" x2="2.54" y2="0" width="0" layer="20"/>
-<hole x="3.81" y="3.81" drill="4.826"/>
-<hole x="3.81" y="24.36" drill="4.826"/>
 <text x="25.74" y="10.16" size="1.778" layer="21">2A Fuse</text>
-<hole x="44.45" y="3.81" drill="4.826"/>
-<hole x="44.45" y="24.36" drill="4.826"/>
-<text x="18.8468" y="25.2476" size="0.8128" layer="21">RPi GPIO LED Breakout v1.0
+<text x="19.6088" y="26.7716" size="0.8128" layer="21">RPi GPIO LED Breakout v1.0
 (C) Colin Gideon, 2019</text>
 <rectangle x1="38.401625" y1="21.345525" x2="38.414325" y2="21.351875" layer="21" grouprefs="LOGO"/>
 <rectangle x1="38.395275" y1="21.351875" x2="38.420675" y2="21.358225" layer="21" grouprefs="LOGO"/>
@@ -4687,16 +4683,24 @@
 <rectangle x1="38.382575" y1="27.574875" x2="38.439725" y2="27.581225" layer="21" grouprefs="LOGO"/>
 <rectangle x1="38.388925" y1="27.581225" x2="38.427025" y2="27.587575" layer="21" grouprefs="LOGO"/>
 <rectangle x1="38.401625" y1="27.587575" x2="38.414325" y2="27.593925" layer="21" grouprefs="LOGO"/>
-<text x="42.90175" y="11.78305" size="0.6096" layer="21" distance="100" align="bottom-right">RPi GND
+<text x="42.90175" y="11.78305" size="0.6096" layer="21" distance="100" align="bottom-right">GPIO IN
 
-GPIO IN
+RPi GND
 
 RPi POS</text>
-<text x="11.6506" y="26.0176" size="0.7" layer="21" distance="250" rot="R90">GND
+<text x="11.3966" y="28.1766" size="0.7" layer="21" distance="250" rot="R90">GND
 POS</text>
-<text x="17.7682" y="25.789" size="0.7" layer="21" distance="250" rot="R90">POS
+<text x="17.7682" y="28.075" size="0.7" layer="21" distance="250" rot="R90">POS
 GND</text>
 <text x="16.129" y="1.0668" size="1.016" layer="22" rot="MR0">Howdy stranger!</text>
+<hole x="3.81" y="3.81" drill="3"/>
+<hole x="44.45" y="3.81" drill="3"/>
+<hole x="44.45" y="26.67" drill="3"/>
+<hole x="3.81" y="26.67" drill="3"/>
+<circle x="3.81" y="3.81" radius="2.55" width="0.1524" layer="21"/>
+<circle x="3.81" y="26.67" radius="2.55" width="0.1524" layer="21"/>
+<circle x="44.45" y="26.67" radius="2.55" width="0.1524" layer="21"/>
+<circle x="44.45" y="3.81" radius="2.55" width="0.1524" layer="21"/>
 </plain>
 <libraries>
 <library name="fuse" urn="urn:adsk.eagle:library:233">
@@ -6335,107 +6339,105 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="X" x="45.3644" y="14.5288" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="43.2135" y="10.7526" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="LED3MM" package3d_urn="urn:adsk.eagle:package:15797/1" value="" x="16.256" y="23.4912" smashed="yes">
-<attribute name="POPULARITY" value="97" x="45.466" y="-5.7188" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="18.161" y="21.8402" size="1.27" layer="27" ratio="10"/>
+<element name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" package="LED3MM" package3d_urn="urn:adsk.eagle:package:15797/1" value="" x="16.256" y="25.7772" smashed="yes">
+<attribute name="POPULARITY" value="97" x="45.466" y="-3.4328" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="18.161" y="24.1262" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="" x="33.0252" y="17.0246" smashed="yes" rot="R180">
 <attribute name="POPULARITY" value="48" x="-3.8048" y="46.2346" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="-3.8048" y="46.2346" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="34.6508" y="17.5072" size="0.9906" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="T1" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" package="TO5" package3d_urn="urn:adsk.eagle:package:28729/1" value="2N2102" x="20.0684" y="16.4644" smashed="yes">
-<attribute name="POPULARITY" value="1" x="56.8984" y="11.3844" size="1.778" layer="27" display="off"/>
+<element name="T1" library="transistor-neu-to92" library_urn="urn:adsk.eagle:library:397" package="TO5" package3d_urn="urn:adsk.eagle:package:28729/1" value="2N2102" x="22.6084" y="19.0044" smashed="yes">
+<attribute name="POPULARITY" value="1" x="59.4384" y="13.9244" size="1.778" layer="27" display="off"/>
 </element>
-<element name="J2" library="con-amp" library_urn="urn:adsk.eagle:library:127" package="10X02MTA" package3d_urn="urn:adsk.eagle:package:8081649/1" value="" x="9.8044" y="23.622" smashed="yes">
-<attribute name="POPULARITY" value="5" x="9.8044" y="23.622" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="B" x="9.8044" y="23.622" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="7.2583" y="25.7729" size="1.27" layer="27"/>
+<element name="J2" library="con-amp" library_urn="urn:adsk.eagle:library:127" package="10X02MTA" package3d_urn="urn:adsk.eagle:package:8081649/1" value="" x="9.9314" y="26.035" smashed="yes">
+<attribute name="POPULARITY" value="5" x="9.9314" y="26.035" size="1.778" layer="27" display="off"/>
+<attribute name="SPICEPREFIX" value="B" x="9.9314" y="26.035" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="7.3853" y="28.1859" size="1.27" layer="27"/>
 </element>
-<element name="E1" library="Weidmueller - 1824440000" package="WEIDMUELLER_1824440000_0" value="WEIDMUELLER_1824440000WEIDMUELLER_1824440000_0_0" x="4.7752" y="14.0716" smashed="yes" rot="R270">
-<attribute name="CIIVA_IDS" value="21179559" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="COLOUR" value="Black" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="COMPONENT_LINK_1_DESCRIPTION" value="Manufacturer URL" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="COMPONENT_LINK_1_URL" value="http://www.weidmueller.com/" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="COMPONENT_LINK_2_DESCRIPTION" value="URL Link1" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="COMPONENT_LINK_2_URL" value="http://catalog.weidmueller.com/catalog/Start.do?localeId=en&amp;ObjectID=1824440000" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CONTACT_MATERIAL" value="Cu-Leg" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CONTACT_SURFACE" value="tinned" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Manufacturer Recommended" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="IMPORTED" value="yes" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="IMPORTED_FROM" value="vault" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="IMPORT_TS" value="1521860254" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="INSULATING_MATERIAL" value="LCP GF" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Weidmueller" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MOUNTING_ONTO_THE__PCB" value="Reflow solder connection" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="1824440000" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NO_OF_POLES" value="4" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGE" value="LSF_SMT_3_5_90_04" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGING" value="Tube" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PITCH_INCH" value="0,138 inch" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PITCH_MM" value="3,5 mm" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PREFIX" value="E" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="QTY" value="37 PCS" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RATED_CURRENT_MIN_NO_OF_POLES__TU__20_DEG__C" value="19 A" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RATED_CURRENT_USE_GROUP__B__UL__1059" value="12 A" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RATED_VOLTAGE_FOR_SURGE_VOLTAGE_CLASS_POLLUTION_DEGREE__II__2" value="320 V" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RATED_VOLTAGE_USE_GROUP__B__UL__1059" value="300 V" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="RELEASE_DATE" value="1441960110" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="REVISION" value="V1" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SHORT_TEXT_FOR_MATERIAL" value="LSF-SMT 3.50/04/90 3.5SN BK TU" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SIDE_TERMINATION_CHARACTERISTIC" value="closed side" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SOLDER_PIN_LENGTH_MM" value="3,5 mm" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SOLID_MAX__H_05__07__V__U" value="1,5 mm2" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SOLID_MIN__H_05__07__V__U" value="0,2 mm2" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="UL__94_FLAMMABILITY_RATING" value="V-0" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VAULT_GUID" value="CD4E20E1-AA6F-4BB5-BEF7-F6E0E90FC9A2" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VAULT_REVISION" value="E4DF01BF-3ED4-43ED-8DAE-3D021E4ED478" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="WIRE_CROSS_SECTION__AWG_MAX__UL__1059" value="AWG 16" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="WIRE_CROSS_SECTION__AWG_MIN__UL__1059" value="AWG 24" x="4.7752" y="14.0716" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="E1" library="Weidmueller - 1824440000" package="WEIDMUELLER_1824440000_0" value="WEIDMUELLER_1824440000WEIDMUELLER_1824440000_0_0" x="4.7752" y="15.3416" smashed="yes" rot="R270">
+<attribute name="CIIVA_IDS" value="21179559" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="COLOUR" value="Black" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="COMPONENT_LINK_1_DESCRIPTION" value="Manufacturer URL" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="COMPONENT_LINK_1_URL" value="http://www.weidmueller.com/" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="COMPONENT_LINK_2_DESCRIPTION" value="URL Link1" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="COMPONENT_LINK_2_URL" value="http://catalog.weidmueller.com/catalog/Start.do?localeId=en&amp;ObjectID=1824440000" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CONTACT_MATERIAL" value="Cu-Leg" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CONTACT_SURFACE" value="tinned" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="FOOTPRINT_VARIANT_NAME_0" value="Manufacturer Recommended" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="IMPORTED" value="yes" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="IMPORTED_FROM" value="vault" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="IMPORT_TS" value="1521860254" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="INSULATING_MATERIAL" value="LCP GF" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="Weidmueller" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MOUNTING_ONTO_THE__PCB" value="Reflow solder connection" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="1824440000" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NO_OF_POLES" value="4" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="LSF_SMT_3_5_90_04" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGING" value="Tube" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PITCH_INCH" value="0,138 inch" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PITCH_MM" value="3,5 mm" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PREFIX" value="E" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="QTY" value="37 PCS" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RATED_CURRENT_MIN_NO_OF_POLES__TU__20_DEG__C" value="19 A" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RATED_CURRENT_USE_GROUP__B__UL__1059" value="12 A" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RATED_VOLTAGE_FOR_SURGE_VOLTAGE_CLASS_POLLUTION_DEGREE__II__2" value="320 V" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RATED_VOLTAGE_USE_GROUP__B__UL__1059" value="300 V" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="RELEASE_DATE" value="1441960110" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="REVISION" value="V1" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SHORT_TEXT_FOR_MATERIAL" value="LSF-SMT 3.50/04/90 3.5SN BK TU" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SIDE_TERMINATION_CHARACTERISTIC" value="closed side" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SOLDER_PIN_LENGTH_MM" value="3,5 mm" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SOLID_MAX__H_05__07__V__U" value="1,5 mm2" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SOLID_MIN__H_05__07__V__U" value="0,2 mm2" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="UL__94_FLAMMABILITY_RATING" value="V-0" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VAULT_GUID" value="CD4E20E1-AA6F-4BB5-BEF7-F6E0E90FC9A2" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VAULT_REVISION" value="E4DF01BF-3ED4-43ED-8DAE-3D021E4ED478" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="WIRE_CROSS_SECTION__AWG_MAX__UL__1059" value="AWG 16" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="WIRE_CROSS_SECTION__AWG_MIN__UL__1059" value="AWG 24" x="4.7752" y="15.3416" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="N$4">
 <contactref element="LED1" pad="K"/>
 <contactref element="T1" pad="3"/>
-<wire x1="17.526" y1="23.4912" x2="17.526" y2="21.5468" width="0.1524" layer="1"/>
-<wire x1="17.526" y1="21.5468" x2="20.0684" y2="19.0044" width="0.1524" layer="1"/>
+<wire x1="22.6084" y1="21.5444" x2="18.3756" y2="25.7772" width="0.1524" layer="1"/>
+<wire x1="17.526" y1="25.7772" x2="18.3756" y2="25.7772" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="LED1" pad="A"/>
 <contactref element="E1" pad="A2"/>
-<wire x1="14.986" y1="23.4912" x2="11.975053125" y2="20.480253125" width="0.1524" layer="1"/>
-<wire x1="11.975053125" y1="20.480253125" x2="9.518471875" y2="20.480253125" width="0.1524" layer="1"/>
-<wire x1="9.518471875" y1="20.480253125" x2="8.796596875" y2="19.758378125" width="0.1524" layer="1"/>
-<wire x1="8.796596875" y1="19.758378125" x2="8.796596875" y2="16.890203125" width="0.1524" layer="1"/>
-<wire x1="8.796596875" y1="16.890203125" x2="9.8752" y2="15.8116" width="0.1524" layer="1"/>
+<wire x1="14.986" y1="25.7772" x2="10.959053125" y2="21.750253125" width="0.1524" layer="1"/>
+<wire x1="10.959053125" y1="21.750253125" x2="9.518471875" y2="21.750253125" width="0.1524" layer="1"/>
+<wire x1="9.518471875" y1="21.750253125" x2="8.509" y2="20.74078125" width="0.1524" layer="1"/>
+<wire x1="8.509" y1="20.74078125" x2="8.509" y2="18.4478" width="0.1524" layer="1"/>
+<wire x1="8.509" y1="18.4478" x2="9.8752" y2="17.0816" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
 <contactref element="T1" pad="2"/>
-<wire x1="29.2152" y1="17.0246" x2="28.655" y2="16.4644" width="0.1524" layer="1"/>
-<wire x1="28.655" y1="16.4644" x2="22.6084" y2="16.4644" width="0.1524" layer="1"/>
+<wire x1="29.2152" y1="17.0246" x2="27.2354" y2="19.0044" width="0.1524" layer="1"/>
+<wire x1="27.2354" y1="19.0044" x2="25.1484" y2="19.0044" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$10">
 <contactref element="T1" pad="1"/>
 <contactref element="E1" pad="A1"/>
-<wire x1="20.0684" y1="13.9244" x2="15.2624" y2="13.9244" width="0.1524" layer="1"/>
-<wire x1="15.2624" y1="13.9244" x2="9.8752" y2="19.3116" width="0.1524" layer="1"/>
+<wire x1="22.6084" y1="16.4644" x2="13.9924" y2="16.4644" width="0.1524" layer="1"/>
+<wire x1="13.9924" y1="16.4644" x2="9.8752" y2="20.5816" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="F1" pad="1"/>
 <contactref element="E1" pad="A4"/>
 <wire x1="16.6878" y1="5.08" x2="16.6878" y2="6.35" width="0.1524" layer="1"/>
-<wire x1="16.6878" y1="6.35" x2="14.2262" y2="8.8116" width="0.1524" layer="1"/>
-<wire x1="14.2262" y1="8.8116" x2="9.8752" y2="8.8116" width="0.1524" layer="1"/>
+<wire x1="16.6878" y1="6.35" x2="12.9562" y2="10.0816" width="0.1524" layer="1"/>
+<wire x1="12.9562" y1="10.0816" x2="9.8752" y2="10.0816" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="J1" pad="2"/>
 <contactref element="R1" pad="1"/>
-<wire x1="45.3644" y1="14.5288" x2="44.6024" y2="14.5288" width="0.1524" layer="1"/>
-<wire x1="44.6024" y1="14.5288" x2="44.0182" y2="15.113" width="0.1524" layer="1"/>
-<wire x1="44.0182" y1="15.113" x2="38.7468" y2="15.113" width="0.1524" layer="1"/>
-<wire x1="38.7468" y1="15.113" x2="36.8352" y2="17.0246" width="0.1524" layer="1"/>
+<contactref element="J1" pad="1"/>
+<wire x1="36.8352" y1="17.0246" x2="45.3202" y2="17.0246" width="0.1524" layer="1"/>
+<wire x1="45.3202" y1="17.0246" x2="45.3644" y2="17.0688" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="J1" pad="3"/>
@@ -6446,30 +6448,29 @@ design rules under a new name.</description>
 <wire x1="39.1922" y1="6.35" x2="39.1922" y2="5.08" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$7">
-<contactref element="J1" pad="1"/>
 <contactref element="E1" pad="A3"/>
-<wire x1="45.3644" y1="17.0688" x2="44.6024" y2="17.0688" width="0.1524" layer="1"/>
-<wire x1="44.6024" y1="17.0688" x2="43.75759375" y2="17.91360625" width="0.1524" layer="1"/>
-<wire x1="43.75759375" y1="17.91360625" x2="33.495975" y2="17.91360625" width="0.1524" layer="1"/>
-<wire x1="33.495975" y1="17.91360625" x2="29.647884375" y2="14.065515625" width="0.1524" layer="1"/>
-<wire x1="23.3172" y1="12.2354" x2="9.9514" y2="12.2354" width="0.1524" layer="1"/>
-<wire x1="9.9514" y1="12.2354" x2="9.8752" y2="12.3116" width="0.1524" layer="1"/>
-<wire x1="29.647884375" y1="14.065515625" x2="25.147315625" y2="14.065515625" width="0.1524" layer="1"/>
+<wire x1="23.3172" y1="12.2354" x2="11.2214" y2="12.2354" width="0.1524" layer="1"/>
+<wire x1="11.2214" y1="12.2354" x2="9.8752" y2="13.5816" width="0.1524" layer="1"/>
+<wire x1="29.647884375" y1="14.065515625" x2="29.21" y2="14.065515625" width="0.1524" layer="1"/>
+<wire x1="29.21" y1="14.065515625" x2="25.147315625" y2="14.065515625" width="0.1524" layer="1"/>
 <wire x1="25.147315625" y1="14.065515625" x2="23.3172" y2="12.2354" width="0.1524" layer="1"/>
+<contactref element="J1" pad="2"/>
+<wire x1="29.647884375" y1="14.065515625" x2="44.901115625" y2="14.065515625" width="0.1524" layer="1"/>
+<wire x1="44.901115625" y1="14.065515625" x2="45.3644" y2="14.5288" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$8">
 <contactref element="E1" pad="A2-2"/>
 <contactref element="J2" pad="1"/>
-<wire x1="11.0744" y1="23.622" x2="11.0744" y2="23.0124" width="0.1524" layer="1"/>
-<wire x1="11.0744" y1="23.0124" x2="3.8736" y2="15.8116" width="0.1524" layer="1"/>
-<wire x1="3.8736" y1="15.8116" x2="2.8752" y2="15.8116" width="0.1524" layer="1"/>
+<wire x1="11.2014" y1="26.035" x2="11.2014" y2="24.4094" width="0.1524" layer="1"/>
+<wire x1="11.2014" y1="24.4094" x2="3.8736" y2="17.0816" width="0.1524" layer="1"/>
+<wire x1="3.8736" y1="17.0816" x2="2.8752" y2="17.0816" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="E1" pad="A1-2"/>
 <contactref element="J2" pad="2"/>
-<wire x1="8.5344" y1="23.622" x2="8.5344" y2="22.3038" width="0.1524" layer="1"/>
-<wire x1="8.5344" y1="22.3038" x2="5.5422" y2="19.3116" width="0.1524" layer="1"/>
-<wire x1="5.5422" y1="19.3116" x2="2.8752" y2="19.3116" width="0.1524" layer="1"/>
+<wire x1="8.6614" y1="26.035" x2="8.6614" y2="22.4308" width="0.1524" layer="1"/>
+<wire x1="8.6614" y1="22.4308" x2="6.8122" y2="20.5816" width="0.1524" layer="1"/>
+<wire x1="6.8122" y1="20.5816" x2="2.8752" y2="20.5816" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

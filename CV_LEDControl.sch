@@ -7242,10 +7242,10 @@ Created by Upverter.com</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="60.96" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="12.7" y1="48.26" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -7259,12 +7259,12 @@ Created by Upverter.com</description>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="60.96" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="53.34" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="53.34" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="53.34" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="E1" gate="D" pin="A2"/>
 <wire x1="45.72" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="60.96" x2="15.24" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
