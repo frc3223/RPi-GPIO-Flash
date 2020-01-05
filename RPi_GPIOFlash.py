@@ -3,7 +3,7 @@
 import RPi.GPIO as GPIO
 import time
 flashes = 4
-flash_duration = .375
+flash_duration = .125
 try:
     GPIO.setmode(GPIO.BCM)  
     GPIO.setup(18,GPIO.OUT)
@@ -23,17 +23,17 @@ try:
     switchx2 = False
     while True: 
         if switchx2 == True:
-            switch2 = raw_input("Would you like to turn the Ring Light On? (Yes/No) ")
-            switch = "No"
+            switch2 = raw_input("Would you like to turn the Ring Light On? (Y/N) ")
+            switch = "N"
         else:
-            switch = raw_input("Would you like to turn the Ring Light Off? (Yes/No) ")
-            switch2 = "No"
+            switch = raw_input("Would you like to turn the Ring Light Off? (Y/N) ")
+            switch2 = "N"
     
-        while str(switch) == "Yes":
+        while str(switch) == "Y":
             GPIO.output(18,False)
             switchx2 = True
             break
-        while str(switch2) == "Yes":
+        while str(switch2) == "Y":
             GPIO.output(18,True)
             switchx2 = False
             break
