@@ -3,7 +3,7 @@
 <eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -74,7 +74,7 @@
 <layer number="116" name="centerDrill" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYTlkYjkz" projecturn="a.cGVyc29uYWw6dWUyYTlkYjkzIzIwMTgwMzExMTIyMTM5MDU2" f3durn="urn:adsk.wipprod:dm.lineage:44-PhaWzREmrI-nRG-LbCg" pcbguid="842ed698-e13c-4199-93cc-e639ff0a9be1" lastpulledtime="" lastsyncedchangeguid="3aca1409-a7a3-e5bb-7b04-c224c40126d4"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYTlkYjkz" projecturn="a.cGVyc29uYWw6dWUyYTlkYjkzIzIwMTgwMzExMTIyMTM5MDU2" f3durn="urn:adsk.wipprod:dm.lineage:44-PhaWzREmrI-nRG-LbCg" pcbguid="842ed698-e13c-4199-93cc-e639ff0a9be1" lastpulledtime="" lastsyncedchangeguid="79169bed-f904-056b-61cb-3dcf135b5b64"/>
 <plain>
 <wire x1="2.54" y1="0" x2="45.72" y2="0" width="0" layer="20"/>
 <wire x1="45.72" y1="0" x2="48.24" y2="2.52" width="0" layer="20"/>
@@ -6015,52 +6015,6 @@ Created by Upverter.com</description>
 </package>
 </packages>
 </library>
-<library name="diode" urn="urn:adsk.eagle:library:210">
-<description>&lt;b&gt;Diodes&lt;/b&gt;&lt;p&gt;
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Motorola : www.onsemi.com
-&lt;li&gt;Fairchild : www.fairchildsemi.com
-&lt;li&gt;Philips : www.semiconductors.com
-&lt;li&gt;Vishay : www.vishay.de
-&lt;/ul&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="DO41-10" urn="urn:adsk.eagle:footprint:43094/1" library_version="8">
-<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
-diameter 2.54 mm, horizontal, grid 10.16 mm</description>
-<wire x1="2.032" y1="-1.27" x2="-2.032" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="2.032" y1="-1.27" x2="2.032" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-2.032" y1="1.27" x2="2.032" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-2.032" y1="1.27" x2="-2.032" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="0" x2="4.064" y2="0" width="0.762" layer="51"/>
-<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.762" layer="51"/>
-<wire x1="-0.635" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0.635" x2="1.016" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="-0.635" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="1.524" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="1.016" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="0.635" x2="0" y2="0" width="0.1524" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="-0.635" width="0.1524" layer="21"/>
-<pad name="A" x="5.08" y="0" drill="1.1176"/>
-<pad name="C" x="-5.08" y="0" drill="1.1176"/>
-<text x="-2.032" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.032" y="-2.794" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-1.651" y1="-1.27" x2="-1.143" y2="1.27" layer="21"/>
-<rectangle x1="2.032" y1="-0.381" x2="3.937" y2="0.381" layer="21"/>
-<rectangle x1="-3.937" y1="-0.381" x2="-2.032" y2="0.381" layer="21"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="DO41-10" urn="urn:adsk.eagle:package:43336/1" type="box" library_version="8">
-<description>DIODE
-diameter 2.54 mm, horizontal, grid 10.16 mm</description>
-<packageinstances>
-<packageinstance name="DO41-10"/>
-</packageinstances>
-</package3d>
-</packages3d>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6321,9 +6275,6 @@ design rules under a new name.</description>
 <attribute name="WIRE_CROSS_SECTION__AWG_MIN__UL__1059" value="AWG 24" x="5.08" y="12.7" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="U$1" library="T Buck Converter" package="TSR2" value="TSR2-2450" x="23.622" y="0.635" smashed="yes"/>
-<element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO41-10" package3d_urn="urn:adsk.eagle:package:43336/1" value="1N4004" x="16.129" y="4.191" smashed="yes" rot="R180">
-<attribute name="POPULARITY" value="82" x="16.129" y="4.191" size="1.778" layer="27" rot="R180" display="off"/>
-</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -6349,9 +6300,9 @@ design rules under a new name.</description>
 <wire x1="10.18" y1="14.44" x2="10.18" y2="13.99" width="0.1524" layer="1"/>
 <wire x1="10.18" y1="13.99" x2="8.89" y2="12.7" width="0.1524" layer="1"/>
 <wire x1="8.89" y1="12.7" x2="8.89" y2="8.001" width="0.1524" layer="1"/>
-<wire x1="8.89" y1="8.001" x2="11.049" y2="5.842" width="0.1524" layer="1"/>
-<contactref element="D1" pad="A"/>
-<wire x1="11.049" y1="5.842" x2="11.049" y2="4.191" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="P$1"/>
+<wire x1="12.7" y1="4.191" x2="28.067" y2="4.191" width="0.1524" layer="1"/>
+<wire x1="8.89" y1="8.001" x2="12.7" y2="4.191" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="LED1" pad="K"/>
@@ -6382,29 +6333,23 @@ design rules under a new name.</description>
 <wire x1="45.72" y1="7.62" x2="45.72" y2="9.0932" width="0.1524" layer="1"/>
 <wire x1="45.72" y1="9.0932" x2="45.3644" y2="9.4488" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$9">
+<signal name="N$7">
+<contactref element="J1" pad="2"/>
+<wire x1="44.2976" y1="10.922" x2="45.3644" y2="11.9888" width="0.1524" layer="1"/>
+<wire x1="38.862" y1="10.922" x2="44.2976" y2="10.922" width="0.1524" layer="1"/>
 <contactref element="WEIDMULLERLSF" pad="A2-2"/>
 <contactref element="T1" pad="1"/>
+<contactref element="U$1" pad="P$2"/>
 <wire x1="10.18" y1="10.94" x2="16.02" y2="10.94" width="0.1524" layer="1"/>
 <wire x1="16.02" y1="10.94" x2="17.78" y2="12.7" width="0.1524" layer="1"/>
 <wire x1="17.78" y1="12.7" x2="22.654" y2="12.7" width="0.1524" layer="1"/>
 <wire x1="22.654" y1="12.7" x2="25.1484" y2="15.1944" width="0.1524" layer="1"/>
-<contactref element="U$1" pad="P$2"/>
-<contactref element="J1" pad="2"/>
-<wire x1="45.3644" y1="11.9888" x2="43.9928" y2="10.6172" width="0.1524" layer="1"/>
-<wire x1="43.9928" y1="10.6172" x2="43.9166" y2="10.541" width="0.1524" layer="1"/>
-<wire x1="43.9928" y1="10.6172" x2="36.0172" y2="10.6172" width="0.1524" layer="1"/>
-<wire x1="36.0172" y1="10.6172" x2="30.607" y2="5.207" width="0.1524" layer="1"/>
-<wire x1="30.607" y1="4.191" x2="30.607" y2="5.207" width="0.1524" layer="1"/>
-<wire x1="30.607" y1="4.191" x2="30.48" y2="4.318" width="0.1524" layer="1"/>
-<wire x1="30.48" y1="4.318" x2="30.48" y2="10.16" width="0.1524" layer="1"/>
-<wire x1="30.48" y1="10.16" x2="27.94" y2="12.7" width="0.1524" layer="1"/>
-<wire x1="27.94" y1="12.7" x2="22.654" y2="12.7" width="0.1524" layer="1"/>
-</signal>
-<signal name="N$7">
-<contactref element="U$1" pad="P$1"/>
-<contactref element="D1" pad="C"/>
-<wire x1="21.209" y1="4.191" x2="28.067" y2="4.191" width="0.1524" layer="1"/>
+<wire x1="22.654" y1="12.7" x2="25.194" y2="10.16" width="0.1524" layer="1"/>
+<wire x1="25.194" y1="10.16" x2="27.94" y2="10.16" width="0.1524" layer="1"/>
+<wire x1="27.94" y1="10.16" x2="38.1" y2="10.16" width="0.1524" layer="1"/>
+<wire x1="38.1" y1="10.16" x2="38.862" y2="10.922" width="0.1524" layer="1"/>
+<wire x1="30.607" y1="4.191" x2="27.94" y2="6.858" width="0.1524" layer="1"/>
+<wire x1="27.94" y1="6.858" x2="27.94" y2="10.16" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

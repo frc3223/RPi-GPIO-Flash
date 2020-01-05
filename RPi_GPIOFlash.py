@@ -43,4 +43,5 @@ except KeyboardInterrupt:
     
     Turning off Ring Light""")
     GPIO.output(18,False)
+    GPIO.cleanup(18)
     exit()
