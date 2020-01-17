@@ -10,7 +10,7 @@ flash_duration = .125
 try:
     #Init of pyNetworkTables server
     #IP of copressor(10.xx.yy.11)
-    ip = '192.168.0.189'
+    ip = '10.xx.yy.zz'
     NetworkTables.initialize(server=ip)
 
     led = NetworkTables.getTable("LED Ring Light")
