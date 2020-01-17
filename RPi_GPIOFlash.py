@@ -3,7 +3,6 @@
 import RPi.GPIO as GPIO
 import time
 import sys
-import time
 from networktables import NetworkTables
 
 flashes = 4
@@ -11,11 +10,11 @@ flash_duration = .125
 try:
     #Init of pyNetworkTables server
     #IP of copressor(10.xx.yy.11)
-    ip = '192.168.10.48'
+    ip = '192.168.0.189'
     NetworkTables.initialize(server=ip)
 
     led = NetworkTables.getTable("LED Ring Light")
-    auto_value = led.getAutoUpdateValue("LED-State", True)
+    LEDState = led.getAutoUpdateValue("LED-State", False)
        
     #Start of control program
     GPIO.setmode(GPIO.BCM)  
@@ -30,21 +29,32 @@ try:
         flashed = flashed+1
     
     #Keeps pin on until program is interupted by Y is entered.
-    GPIO.output(18,True)
 
     #Sketchy AF Ring Light switch
     switchx2 = False
-    while True: 
-        #NetworkTables based switch so programming doesn't lynch me
-        if auto_value.value == True:
-            switchx2 = False
-            GPIO.output(18,True)
-            
-        elif auto_value.value == False:
-            switchx2 = True
+    while True:  
+        if switchx2 == True:
+            switch2 = raw_input("Would you like to lock out the Ring Light & turn it off? (Y/N) ")
+            switch = "N"
+        else:
+            switch = raw_input("Would you like to unlock the Ring Light & turn it on? (Y/N) ")
+            switch2 = "N"
+    
+        while str(switch) == "Y":
+           LEDState.value = False
             GPIO.output(18,False)
+            switchx2 = True
+            break
+        while str(switch2) == "Y":
+            LEDState.value = True
+            #NetworkTables based switch so programming doesn't lynch me
+            if LEDState.value == True:
+                GPIO.output(18,True)
+            elif LEDState.value == False:
+                GPIO.output(18,False)
+                switchx2 = False
+            break
         
-        time.sleep(.25)
 
 except KeyboardInterrupt:
     print("""
