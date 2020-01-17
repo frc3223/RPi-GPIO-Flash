@@ -2,9 +2,24 @@
 #Copyright 2019, protected under GNU General Public Licence
 import RPi.GPIO as GPIO
 import time
+import sys
+import time
+import networktables
+from networktables import NetworkTables
+import logging
+
 flashes = 4
 flash_duration = .125
 try:
+    #Init of pyNetworkTables server
+    while True:
+        logging.basicConfig(level=logging.DEBUG)
+
+        ip = '192.168.10.48'
+
+        NetworkTables.initialize(server=ip)
+       
+    #Start of control program
     GPIO.setmode(GPIO.BCM)  
     GPIO.setup(18,GPIO.OUT)
     
