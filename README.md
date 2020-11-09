@@ -8,3 +8,4 @@ Ideally, this program is meant for FRC vision development using a open source vi
 Made by Colin Gideon "SpookyWoogin", FRC 3223, Robotics of Central Kitsap
 
 Copyright 2019, protected under the GNU General Public Licence.
+This design has been depricated in pursuit of a better design.
